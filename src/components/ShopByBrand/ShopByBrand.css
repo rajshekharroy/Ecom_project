@@ -1,0 +1,67 @@
+.shop-by-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shop-by-brand h1 {
+    color: #262626;
+    font-weight: 500;
+}
+
+.all-brand-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll;
+}
+
+.all-brand-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.brand-names img {
+    width: 7.5vw;
+    height: 7.5vw;
+    min-height: 80px;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+    object-fit: contain;
+    border: 1px solid rgb(156, 156, 156);
+    padding: 1rem;
+}
+
+.brand-names p {
+    margin-top: 10px;
+    color: #747474;
+    font-size: max(1.5vw,16px);
+    cursor: pointer;
+}
+
+.shop-by-brand hr {
+    margin: 10px 0;
+    height: 2px;
+    border: none;
+    background-color: #e2e2e2;
+}
+
+.brand-names .active {
+    /* filter: grayscale(100%); this is for test a new property */
+    border-radius: 10%;
+    scale: 0.95;
+}
+
+
+
+@media (max-width:1050px){
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+}

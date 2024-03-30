@@ -2,10 +2,11 @@
     height: 34vw;
     width: 100%;
     margin: 30px auto;
-    background: url('./1.jpg') no-repeat;
+    background: url('./2.jpg') no-repeat;
     background-size: cover;
     position: relative;
     background-position: center;
+    border-radius: 15px;
 }
 
 .header-contents {
@@ -22,11 +23,11 @@
 
 .header-contents h2 {
     font-weight: 500;
-    color: white;
+    color: yellow;
     font-size: max(4.5vw,22px);
 }
 
 .header-contents p {
-    color: white;
+    color: yellow;
     font-size: 1vw;
 }

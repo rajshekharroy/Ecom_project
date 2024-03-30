@@ -1,0 +1,91 @@
+.device {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.device-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.device-image:hover {
+    scale: 1.03;
+}
+
+.device-img-container {
+    position: relative;
+    height: 500px;
+}
+
+.device-info {
+    padding: 10px 20px;
+}
+
+.device-info .device-name {
+    font-size: larger;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.device-info .description {
+    color: rgb(112, 112, 112);
+    font-weight: 500;
+}
+
+.device-img-container .add-to-cart {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    background-color: rgb(2, 115, 28);
+    font-weight: 500;
+    color: white;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.device-img-container .add-to-cart:hover {
+    background-color: rgba(2, 115, 28, 0.732);
+}
+
+.device-img-container .remove {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    background-color: rgb(168, 1, 1);
+    font-weight: 500;
+    color: white;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.device-img-container .remove:hover {
+    background-color: rgba(168, 1, 1, 0.648);
+}
+
+.device-info .price {
+    position: absolute;
+    color: rgb(0, 45, 92);
+    font-size: 22px;
+    font-weight: 500;
+    bottom: 15px;
+}
+
