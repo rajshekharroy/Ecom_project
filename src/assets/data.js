@@ -16,6 +16,7 @@ import cart_icon from './logo/cart.png'
 import search_icon from './logo/search.png'
 import minus from './logo/minus.png'
 import plus from './logo/plus.png'
+import deleteit from './logo/delete.png'
 
 //social_icons
 
@@ -141,7 +142,8 @@ export const datas = {
     cart_icon,
     search_icon,
     minus,
-    plus
+    plus,
+    deleteit
 }
 
 export const brands = [
