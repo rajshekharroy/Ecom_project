@@ -1,0 +1,15 @@
+.pay-con {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.test-site {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: max(3vw,16px);
+    text-align: center;
+    height: fit-content;
+    margin-bottom: 20px;
+    padding: 20px;
+}

@@ -16,6 +16,38 @@
     animation: 1s scale ease-in-out;
  }
 
+ .drop-down {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .drop-down select {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .drop-down::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+
  @media (max-width: 1300px){
     .phone-page h1 {
         font-size: max(2.5vw,20px);

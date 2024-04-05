@@ -6,7 +6,7 @@ import { StoreContext } from "../../context/StoreContext";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Navbar({ setShowHam }) {
-  const [loginStatus, setLoginStatus] = useState("Sign In")
+  // const [loginStatus, setLoginStatus] = useState("Sign In")
   const { user , loginWithRedirect , isAuthenticated , logout} = useAuth0();
 
   const { getTotalCartAmount, searchRes, handleSearch } =
@@ -45,7 +45,6 @@ function Navbar({ setShowHam }) {
           {
                 isAuthenticated 
                 ?( <img className="sign-out" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} src={datas.sign_out} alt="" />)
-                // (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Sign Out</button>)
               
                 : (<button onClick={() => loginWithRedirect()}>
                  Sign In

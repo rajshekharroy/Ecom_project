@@ -216,6 +216,57 @@ export const brands = [
     }
 ]
 
+export const phone_brand =[
+    {
+        brand_name: "Apple"
+    },
+    {
+        brand_name: "Samsung"
+    },
+    {
+        brand_name: "OnePlus"
+    },
+    {
+        brand_name: "Vivo"
+    },
+    {
+        brand_name: "Realme"
+    },
+]
+
+export const watch_brand =[
+    {
+        brand_name: "Apple"
+    },
+    {
+        brand_name: "Samsung"
+    },
+    {
+        brand_name: "Amazfit"
+    }
+]
+
+export const laptop_brand =[
+    {
+        brand_name: "Apple"
+    },
+    {
+        brand_name: "Asus"
+    },
+    {
+        brand_name: "MSI"
+    }
+]
+
+export const camera_brand =[
+    {
+        brand_name: "Canon"
+    },
+    {
+        brand_name: "Nikon"
+    }
+]
+
 
 export const product_list = [
     {

@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./Mobile.css";
 import { StoreContext } from "../../context/StoreContext";
 import Device from "../../components/Devices/Device";
-import { brands, datas } from "../../assets/data";
+import { brands, datas, phone_brand } from "../../assets/data";
 
-function Mobile({ category, brand, setBrand }) {
+function Mobile({ category, gadgetBrand, setGadgetBrand }) {
   const { product_list, searchRes } = useContext(StoreContext);
 
   const finalRes = product_list.filter((item) => {
@@ -18,35 +18,25 @@ function Mobile({ category, brand, setBrand }) {
 
   return (
     <div className="phone-page">
-      {/* <h2>{category==="Phone"?"Explore Our Selection of Smartphones, Smartwatches, Laptops, and Cameras !":`Your devices!`}</h2> */}
       <img className="phone-ad" src={datas.phoneAd} alt="" />
       <h1>Capture Moments on the Go: Explore Our Mobile Collection</h1>
-
-      {brands.map((item, index) => {
-        return (
-          <select
-            onChange={() =>
-              setBrand((prev) =>
-                prev === item.brand_name ? "All" : item.brand_name
-              )
-            }
-            name=""
-            id=""
-            key={index}
-          >
-            <option value="All">All</option>
-            <option value="Apple">Apple</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Vivo">Vivo</option>
-            <option value="OnePlus">OnePlus</option>
-            <option value="Realme">Realme</option>
-          </select>
-        );
-      })}
+      <div className="drop-down">
+      <select
+        onChange={(e) => setGadgetBrand(e.target.value === "All" ? null : e.target.value)}
+        defaultValue={gadgetBrand ? gadgetBrand : "All"}
+      >
+        <option value="All">All</option>
+        {phone_brand.map((item, index) => (
+          <option key={index} value={item.brand_name}>
+            {item.brand_name}
+          </option>
+        ))}
+      </select>
+      </div>
 
       <div className="smartphone-display-list">
         {finalRes.map((item, index) => {
-          if (category === item.category) {
+          if (category === item.category && (gadgetBrand === null || gadgetBrand === item.brand_name)) {
             return (
               <Device
                 key={index}
@@ -59,6 +49,7 @@ function Mobile({ category, brand, setBrand }) {
               />
             );
           }
+          return null;
         })}
       </div>
     </div>
@@ -66,3 +57,4 @@ function Mobile({ category, brand, setBrand }) {
 }
 
 export default Mobile;
+

@@ -14,9 +14,11 @@ import Camera from './pages/Camera/Camera'
 import Contact from './pages/Contact/Contact'
 import About from './pages/About/About'
 import Privacy from './pages/Privacy/Privacy'
+import Order from './pages/Order/Order'
+import Payment from './pages/Payment/Payment'
 
 function App() {
-  const [brand1,setBrand1] = useState('All')
+  const [gadgetBrand,setGadgetBrand] = useState(null)
   const [showHam, setShowHam] = useState(false)
 
   const location = useLocation();
@@ -44,13 +46,15 @@ function App() {
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/cart' element={<Cart />}/>
-      <Route path='/mobile' element={<Mobile category={category} brand={brand1} setBrand={setBrand1}/>}/>
-      <Route path='/smartwatch' element={<SmartWatch category={category}/>}/>
-      <Route path='/laptop' element={<Laptop category={category}/>}/>
-      <Route path='/camera' element={<Camera category={category}/>}/>
+      <Route path='/mobile' element={<Mobile category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
+      <Route path='/smartwatch' element={<SmartWatch category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
+      <Route path='/laptop' element={<Laptop category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
+      <Route path='/camera' element={<Camera category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/privacy' element={<Privacy/>}/>
+      <Route path='/order' element={<Order/>}/>
+      <Route path='/order/payment' element={<Payment/>}/>
      </Routes>
         <Footer />
      </div>

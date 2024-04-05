@@ -50,7 +50,7 @@ function ScrollNavbar({setShowHam}) {
           <Link to='/cart'><img src={datas.cart_icon} alt="" className='cart-icon' /></Link>
           <div className={getTotalCartAmount()?"dot":""}></div>
         </div>
-        {isAuthenticated && (<p>Hello, {user.name}</p>)}
+        {isAuthenticated && (<p>Hi, {user.name}</p>)}
    
    {
          isAuthenticated 
