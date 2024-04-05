@@ -3,6 +3,8 @@ import './Device.css'
 import { StoreContext } from '../../context/StoreContext'
 
 function Device({id,name,image,price,description,category}) {
+  
+  const {cartItems,addToCart,removeFromCart} = useContext(StoreContext)
 
   const redirectToGsmArena = () => {
     if (category === "Phone"){
@@ -12,7 +14,7 @@ function Device({id,name,image,price,description,category}) {
     }
 };
 
-    const {cartItems,addToCart,removeFromCart} = useContext(StoreContext)
+
   return (
     <div className='device'>
         <div className="device-img-container">

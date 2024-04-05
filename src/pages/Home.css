@@ -1,3 +1,4 @@
 .home-section {
     padding: 0% 10%;
+    animation: scale 0.8s ease-in-out;
 }

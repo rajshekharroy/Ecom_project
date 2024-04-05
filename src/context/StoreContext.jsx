@@ -130,7 +130,6 @@ const StoreContextProvider = (props) => {
   const cartNo = () => {
     for (const item in cartItems){
       if (cartItems[item]>0){
-        console.log (cartItems[item])
       }
     }
   }
@@ -140,6 +139,18 @@ const StoreContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: "" }));
   };
 
+
+
+    const [searchRes, SetSearchRes] = useState("")
+
+    const handleSearch = (query)=>{
+      SetSearchRes(query)
+    }
+
+
+
+ 
+
   const contextValue = {
     product_list,
     cartItems,
@@ -148,7 +159,10 @@ const StoreContextProvider = (props) => {
     removeFromCart,
     getTotalCartAmount,
     removeAll,
+    searchRes,
+    handleSearch
   };
+
 
   return (
     <StoreContext.Provider value={contextValue}>

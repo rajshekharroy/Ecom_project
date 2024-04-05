@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     text-align: center;
     margin: 20px 0px;
     overflow-x: scroll;
@@ -25,8 +25,8 @@
 
 
 .brand-names img {
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 7vw;
+    height: 7vw;
     min-height: 80px;
     min-width: 80px;
     cursor: pointer;

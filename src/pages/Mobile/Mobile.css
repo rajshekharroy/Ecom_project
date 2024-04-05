@@ -1,0 +1,23 @@
+.phone-page {
+    padding: 0 10%;
+}
+
+.phone-page h1 {
+    padding: 20px;
+}
+
+.phone-ad {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    animation: 1s scale ease-in-out;
+ }
+
+ @media (max-width: 1300px){
+    .phone-page h1 {
+        font-size: max(2.5vw,20px);
+    }
+ }

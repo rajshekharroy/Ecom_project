@@ -8,6 +8,7 @@ import apple_logo from './logo/apple_logo.png'
 import samsung_logo from './logo/samsung_logo.png'
 import asus_logo from './logo/asus_logo.png'
 import oneplus_logo  from './logo/oneplus_logo.png'
+import vivo_logo from './logo/vivo_logo.png'
 import realme_logo from  './logo/realme_logo.png'
 import msi_logo from  './logo/msi_logo.png'
 import canon_logo from  './logo/canon_logo.png'
@@ -17,12 +18,22 @@ import search_icon from './logo/search.png'
 import minus from './logo/minus.png'
 import plus from './logo/plus.png'
 import deleteit from './logo/delete.png'
+import cross from './logo/cross.png'
+import ham from './logo/ham.png'
+import phoneAd from '../pages/Mobile/offer.png'
+import watchAd from '../pages/SmartWatch/watch_ad.png'
+import laptopAd from '../pages/Laptop/laptop_ad.png'
+import cameraAd from '../pages/Camera/camera_ad.png'
+import sign_out from './logo/sign_out.png'
+
 
 //social_icons
 
 import facebook_icon from './social_icons/facebook_icon.png'
 import twitter_icon from './social_icons/twitter_icon.png'
 import linkedin_icon from './social_icons/linkedin_icon.png'
+import youtube_icon from './social_icons/youtube_icon.png'
+import instagram_icon from './social_icons/instagram_icon.png'
 
 
 //apple_phones
@@ -51,6 +62,17 @@ import oneplus3 from './oneplus/oneplus_12r.jpg'
 import oneplus4 from './oneplus/oneplus_nord_ce3.jpg'
 import oneplus5 from './oneplus/oneplus_nord3.jpg'
 
+//vivo_phones
+
+import vivo1 from './vivo/vivo_v30_pro.jpg'
+import vivo2 from './vivo/vivo_x80.jpg'
+import vivo3 from './vivo/vivo_x80_pro.jpg'
+import vivo4 from './vivo/vivo_x90.jpg'
+import vivo5 from './vivo/vivo_x90_pro.jpg'
+import vivo6 from './vivo/vivo_x100.jpg'
+import vivo7 from './vivo/vivo_x100_pro.jpg'
+
+
 //realme_phones
 
 import realme1 from './realme/realme_12.jpg'
@@ -58,7 +80,7 @@ import realme2 from './realme/realme_12pro.jpg'
 import realme3 from './realme/realme_narzo_60.jpg'
 import realme4 from './realme/realme_narzo_60x.jpg'
 import realme5 from './realme/realme_narzo_70pro.jpg'
-import realme6 from './realme/realme_narzo_n53.jpg'
+import realme6 from './realme/realme_12plus.jpg'
 
 //apple_watch
 
@@ -138,12 +160,21 @@ export const datas = {
     facebook_icon,
     twitter_icon,
     linkedin_icon,
+    youtube_icon,
+    instagram_icon,
     logo_white,
     cart_icon,
     search_icon,
     minus,
     plus,
-    deleteit
+    deleteit,
+    cross,
+    ham,
+    phoneAd,
+    watchAd,
+    laptopAd,
+    cameraAd,
+    sign_out
 }
 
 export const brands = [
@@ -162,6 +193,10 @@ export const brands = [
     {
         brand_name: "OnePlus",
         brand_image: oneplus_logo
+    },
+    {
+        brand_name: "Vivo",
+        brand_image: vivo_logo
     },
     {
         brand_name: "Realme",
@@ -304,7 +339,7 @@ export const product_list = [
     {
         _id: "13",
         name: "OnePlus 12R",
-        image: oneplus1,
+        image: oneplus3,
         category: "Phone",
         price: 45999,
         description: "The OnePlus 12R offers flagship performance in a compact form factor.",
@@ -337,6 +372,69 @@ export const product_list = [
         price: 28999,
         description: "Experience smooth performance and stunning design with the OnePlus Nord 3.",
         brand_name: "OnePlus"
+    },
+    {
+        _id: "66",
+        name: "Vivo V30 Pro",
+        image: vivo1,
+        category: "Phone",
+        price: 46999,
+        description: "Futuristic innovation embodied in the Vivo V30 Pro. With advanced features and sleek design.",
+        brand_name: "Vivo"
+    },
+    {
+        _id: "67",
+        name: "Vivo X80",
+        image: vivo2,
+        category: "Phone",
+        price: 52990,
+        description: "The Vivo X80 strikes a harmonious balance between style and performance.",
+        brand_name: "Vivo"
+    },
+    {
+        _id: "68",
+        name: "Vivo X80 Pro",
+        image: vivo3,
+        category: "Phone",
+        price: 59999,
+        description: "Experience elevation in mobile technology with the Vivo X80 Pro.",
+        brand_name: "Vivo"
+    },
+    {
+        _id: "69",
+        name: "Vivo X90",
+        image: vivo4,
+        category: "Phone",
+        price: 49990,
+        description: "Prepare for awe-inspiring moments with the Vivo X90.",
+        brand_name: "Vivo"
+    },
+    {
+        _id: "70",
+        name: "Vivo X90 Pro",
+        image: vivo5,
+        category: "Phone",
+        price: 75780,
+        description: "Enter a realm of mobile innovation with the Vivo X90 Pro. ",
+        brand_name: "Vivo"
+    },
+    {
+        _id: "71",
+        name: "Vivo X100",
+        image: vivo6,
+        category: "Phone",
+        price: 69999,
+        description: "Embrace the future with the Vivo X100. Revolutionary technology meets elegant design.",
+        brand_name: "Vivo"
+    },
+    {
+        _id: "72",
+        name: "Vivo X100 Pro",
+        image: vivo7,
+        category: "Phone",
+        price: 89999,
+        description: "Experience mobile perfection with the Vivo X100 Pro.",
+        brand_name: "Vivo"
     },
     {
         _id: "18",
@@ -385,10 +483,10 @@ export const product_list = [
     },
     {
         _id: "23",
-        name: "Realme Narzo N53",
+        name: "Realme 12 Plus",
         image: realme6,
         category: "Phone",
-        price: 8499,
+        price: 19999,
         description: "The Realme Narzo N53 offers an immersive entertainment experience.",
         brand_name: "Realme"
     },
@@ -769,6 +867,5 @@ export const product_list = [
         price: 91990,
         description: "Experience the perfect balance of portability and performance with the Nikon Z50 mirrorless camera.",
         brand_name: "Nikon"
-    }    
-    
+    }
 ]

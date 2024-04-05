@@ -9,11 +9,12 @@ function Footer() {
     <div className="footer-content">
       <div className="footer-content-left">
         <img src={datas.logo_white} alt="" />
-        <p>Enjoy tasty meals delivered to you from [Your Food Delivery Website Name]. Choose from a variety of yummy foods, order online easily, and get them delivered fast. Join us and taste the joy</p>
+        <p>Connect with Us: Follow Our Social Media for Tech News & Community Updates! Need Assistance? Contact Our Support Team for Expert Help & Advice.</p>
         <div className="footer-social-icons">
           <img src={datas.facebook_icon} alt="" />
+          <img src={datas.instagram_icon} alt="" />
           <img src={datas.twitter_icon} alt="" />
-          <img src={datas.linkedin_icon} alt="" />
+          <img src={datas.youtube_icon} alt="" />
         </div>
       </div>
       <div className="footer-content-center">

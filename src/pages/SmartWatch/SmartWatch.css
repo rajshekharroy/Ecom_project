@@ -1,0 +1,12 @@
+.watch-page {
+    padding: 0 10%;
+}
+
+.watch-ad {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}

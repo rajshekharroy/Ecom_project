@@ -3,14 +3,20 @@ import './ScrollNavbar.css'
 import { Link } from 'react-router-dom'
 import { datas } from '../../assets/data'
 import { StoreContext } from '../../context/StoreContext';
+import { useAuth0 } from "@auth0/auth0-react";
 
-function ScrollNavbar() {
+
+function ScrollNavbar({setShowHam}) {
+  const { user , loginWithRedirect , isAuthenticated , logout} = useAuth0();
     const [isScrolled, setIsScrolled] = useState(false);
-    const {getTotalCartAmount} = useContext(StoreContext)
+    const {getTotalCartAmount,searchRes,handleSearch} = useContext(StoreContext)
+    const handleChange = (evt)=>{
+      handleSearch(evt.target.value)
+    }
     useEffect(()=>{
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
-            if (scrollTop > 80) { // Change this value based on when you want the navbar to appear
+            if (scrollTop > 150) { // Change this value based on when you want the navbar to appear
                 setIsScrolled(true);
               } else {
                 setIsScrolled(false);
@@ -22,7 +28,9 @@ function ScrollNavbar() {
           };
     },[])
   return (
+    <>
     <div className={`scroll-navbar ${isScrolled ? 'show' : 'hide'}`}>
+      <div className='top-section'>
         <Link to='/'>
         <img src={datas.logo} alt="" className='logo'/>
       </Link>
@@ -34,16 +42,39 @@ function ScrollNavbar() {
         <Link to='/camera'>Cameras</Link>
         <Link to='/contact'>Contact Us</Link>
       </ul>
-
+      
       <div className="scroll-navbar-right">
-        <img src={datas.search_icon} alt="" className='search-icon' />
+        {/* <img src={datas.search_icon} alt="" className='search-icon' />
+        <input type="text" placeholder='search for phone' value={searchRes} onChange={handleChange}/> */}
         <div className="scroll-navbar-cart">
           <Link to='/cart'><img src={datas.cart_icon} alt="" className='cart-icon' /></Link>
           <div className={getTotalCartAmount()?"dot":""}></div>
         </div>
-        <button>Sign In</button>
+        {isAuthenticated && (<p>Hello, {user.name}</p>)}
+   
+   {
+         isAuthenticated 
+         ?( <img className="sign-out" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} src={datas.sign_out} alt="" />)
+         // (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Sign Out</button>)
+       
+         : (<button onClick={() => loginWithRedirect()}>
+          Sign In
+       </button>)
+       }
+        <img onClick={()=>setShowHam(true)} className='ham' src={datas.ham} alt="" />
+      </div>
+      </div>
+      <div className="scroll-search-section">
+        <input
+          type="text"
+          placeholder="Search for Mobile, Laptop, Smartwatch, Camera"
+          value={searchRes}
+          onChange={handleChange}
+        />
+         <img src={datas.search_icon} alt="" className="search-icon" />
       </div>
     </div>
+    </>
   )
 }
 
