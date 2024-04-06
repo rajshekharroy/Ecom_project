@@ -16,7 +16,7 @@ function ScrollNavbar({setShowHam}) {
     useEffect(()=>{
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
-            if (scrollTop > 150) { // Change this value based on when you want the navbar to appear
+            if (scrollTop > 150) { 
                 setIsScrolled(true);
               } else {
                 setIsScrolled(false);
@@ -44,8 +44,6 @@ function ScrollNavbar({setShowHam}) {
       </ul>
       
       <div className="scroll-navbar-right">
-        {/* <img src={datas.search_icon} alt="" className='search-icon' />
-        <input type="text" placeholder='search for phone' value={searchRes} onChange={handleChange}/> */}
         <div className="scroll-navbar-cart">
           <Link to='/cart'><img src={datas.cart_icon} alt="" className='cart-icon' /></Link>
           <div className={getTotalCartAmount()?"dot":""}></div>
@@ -55,7 +53,6 @@ function ScrollNavbar({setShowHam}) {
    {
          isAuthenticated 
          ?( <img className="sign-out" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} src={datas.sign_out} alt="" />)
-         // (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Sign Out</button>)
        
          : (<button onClick={() => loginWithRedirect()}>
           Sign In

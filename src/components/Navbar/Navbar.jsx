@@ -6,7 +6,6 @@ import { StoreContext } from "../../context/StoreContext";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Navbar({ setShowHam }) {
-  // const [loginStatus, setLoginStatus] = useState("Sign In")
   const { user , loginWithRedirect , isAuthenticated , logout} = useAuth0();
 
   const { getTotalCartAmount, searchRes, handleSearch } =
