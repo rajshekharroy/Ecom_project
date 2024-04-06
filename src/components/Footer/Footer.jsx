@@ -18,20 +18,35 @@ function Footer() {
         </div>
       </div>
       <div className="footer-content-center">
-        <h2>COMPANY</h2>
+        <h2>Customer Service</h2>
         <ul>
-          <Link to='/'><li>Home</li></Link>
-          <Link to='/about'><li>About</li></Link>
+          <Link to='/return'><li>Returns & Exchanges</li></Link>
           <Link to='/delivery'><li>Delivery</li></Link>
-          <Link to='/privacy'><li>Privacy policy</li></Link>
+          <Link to='/privacy'><li>Privacy Policy</li></Link>
+          <Link to='/terms'><li>Terms of Use</li></Link>
+          <Link to='/about'><li>About Us</li></Link>
+        </ul>
+      </div>
+
+      <div className="footer-content-center">
+        <h2>Payment Options</h2>
+        <ul className='payment-methods'>
+          <li>Credit Card</li>
+          <li>Debit Card</li>
+          <li>UPI</li>
+          <div className="methods">
+          <img src={datas.rupay} alt="" />
+          <img src={datas.upi} alt="" />
+          <img src={datas.visa} alt="" />
+          <img src={datas.mastercard} alt="" />
+          </div>
         </ul>
       </div>
       <div className="footer-content-right">
-        <h2>GET IN TOUCH</h2>
-        <ul>
-          <li>+91 1234567890</li>
-          <li>support@yantra.in</li>
-          <li></li>
+        <h2>Contact</h2>
+        <ul className='ulll'>
+          <li>+91 8116966256</li>
+          <li>rajsheharroy34@gmail.com</li>
         </ul>
       </div>
     </div>

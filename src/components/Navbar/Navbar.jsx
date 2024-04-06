@@ -16,6 +16,11 @@ function Navbar({ setShowHam }) {
     handleSearch(evt.target.value);
   };
 
+  const ForHam = (evt)=>{
+      evt.preventDefault();
+      setShowHam(true);
+  }
+
   return (
     <>
       <div className="navbar">
@@ -51,12 +56,14 @@ function Navbar({ setShowHam }) {
               </button>)
               }
 
+              
+<div  onClick={ForHam}>
           <img
-            onClick={() => setShowHam(true)}
             className="ham"
             src={datas.ham}
             alt=""
           />
+          </div>
         </div>
       </div>
       <div className="search-section">

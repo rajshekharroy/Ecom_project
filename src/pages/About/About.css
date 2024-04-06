@@ -1,4 +1,4 @@
-.about-container {
+.additional {
     min-height: 100vh;
     width: 100vw;
     text-align: center;
@@ -7,7 +7,7 @@
     margin: 50px auto;
 }
 
-.about-container .about {
+.additional .inside {
     width: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: fit-content;
@@ -15,17 +15,17 @@
     padding: 30px;
 }
 
-.about-container p {
+.additional p {
     font-size: large;
     text-align: left;
 }
 
-.about-container h1 {
+.additional h1 {
     padding-bottom: 50px;
 }
 
 @media (max-width: 1100px) {
-    .about-container .about {
+    .additional .inside {
         width: 80%;
     }
 }

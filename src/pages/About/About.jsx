@@ -3,8 +3,8 @@ import './About.css'
 
 function About() {
   return (
-    <div className='about-container'>
-        <div className="about">
+    <div className='additional'>
+        <div className="inside">
         <h1>About Us</h1>
         <p>Welcome to Yantra, where our commitment to innovation, excellence, and customer satisfaction knows no bounds.
 

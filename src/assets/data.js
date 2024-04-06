@@ -25,6 +25,10 @@ import watchAd from '../pages/SmartWatch/watch_ad.png'
 import laptopAd from '../pages/Laptop/laptop_ad.png'
 import cameraAd from '../pages/Camera/camera_ad.png'
 import sign_out from './logo/sign_out.png'
+import rupay from './logo/rupay.png'
+import upi from './logo/upi.png'
+import visa from './logo/visa.png'
+import mastercard from './logo/mastercard.png'
 
 
 //social_icons
@@ -174,7 +178,11 @@ export const datas = {
     watchAd,
     laptopAd,
     cameraAd,
-    sign_out
+    sign_out,
+    rupay,
+    upi,
+    visa,
+    mastercard
 }
 
 export const brands = [

@@ -3,9 +3,10 @@ import "./Privacy.css";
 
 function Privacy() {
   return (
-    <div className="privacy-container">
+    <div className="additional">
+      <div className="inside">
       <h1>Privacy Policy</h1>
-      <ul>
+      <ul className="exception-list">
         <h3>Information We Collect</h3>
         <li>
           When you visit our website or interact with us, we may collect
@@ -27,6 +28,7 @@ function Privacy() {
         and services</li>
         <li> Complying with legal and regulatory requirements</li>
       </ul>
+    </div>
     </div>
   );
 }
