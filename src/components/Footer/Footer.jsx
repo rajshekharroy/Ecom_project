@@ -44,9 +44,9 @@ function Footer() {
       </div>
       <div className="footer-content-right">
         <h2>Contact</h2>
-        <ul className='ulll'>
-          <li>+91 8116966256</li>
-          <li>rajsheharroy34@gmail.com</li>
+        <ul className='mobile-email'>
+          <a href="tel:+918116966256"><li>+91 8116966256</li></a>
+          <a href="mailto:raj.codehub@gmail.com"><li>raj.codehub@gmail.com</li></a>
         </ul>
       </div>
     </div>

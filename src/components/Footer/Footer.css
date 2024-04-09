@@ -80,6 +80,10 @@
     border: none;
 }
 
+.mobile-email a li {
+    cursor: pointer;
+}
+
 @media (max-width:1100px){
     .footer-content {
         display: flex;
