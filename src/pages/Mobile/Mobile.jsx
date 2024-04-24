@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Mobile.css";
 import { StoreContext } from "../../context/StoreContext";
 import Device from "../../components/Devices/Device";
 import { brands, datas, phone_brand } from "../../assets/data";
 
-function Mobile({ category, gadgetBrand, setGadgetBrand }) {
+function Mobile({location, category, gadgetBrand, setGadgetBrand,selectedValue, setSelectedValue }) {
   const { product_list, searchRes } = useContext(StoreContext);
 
   const finalRes = product_list.filter((item) => {
@@ -14,7 +14,10 @@ function Mobile({ category, gadgetBrand, setGadgetBrand }) {
     );
   });
 
-
+  useEffect(() => {
+    setGadgetBrand(null);
+    setSelectedValue("All");
+}, [location,setGadgetBrand]);
 
   return (
     <div className="phone-page">
@@ -22,8 +25,11 @@ function Mobile({ category, gadgetBrand, setGadgetBrand }) {
       <h1>Capture Moments on the Go: Explore Our Mobile Collection</h1>
       <div className="drop-down">
       <select
-        onChange={(e) => setGadgetBrand(e.target.value === "All" ? null : e.target.value)}
-        defaultValue={gadgetBrand ? gadgetBrand : "All"}
+        onChange={(e) => {setGadgetBrand(e.target.value === "All" ? null : e.target.value)
+        setSelectedValue(e.target.value);
+      }}
+        // defaultValue={gadgetBrand ? gadgetBrand : "All"}
+        value={selectedValue}
       >
         <option value="All">All</option>
         {phone_brand.map((item, index) => (

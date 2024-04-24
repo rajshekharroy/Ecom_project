@@ -33,6 +33,7 @@ const ScrollToTop=()=>{
 function App() {
   const [gadgetBrand,setGadgetBrand] = useState(null)
   const [showHam, setShowHam] = useState(false)
+  const [selectedValue, setSelectedValue] = useState("All");
 
   const location = useLocation();
   const deviceCategories = {
@@ -52,10 +53,10 @@ function App() {
      <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/cart' element={<Cart />}/>
-    <Route path='/mobile' element={<Mobile category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
-    <Route path='/smartwatch' element={<SmartWatch category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
-    <Route path='/laptop' element={<Laptop category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
-    <Route path='/camera' element={<Camera category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
+    <Route path='/mobile' element={<Mobile selectedValue={selectedValue} setSelectedValue={setSelectedValue} location={location} category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
+    <Route path='/smartwatch' element={<SmartWatch selectedValue={selectedValue} setSelectedValue={setSelectedValue} location={location} category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
+    <Route path='/laptop' element={<Laptop selectedValue={selectedValue} setSelectedValue={setSelectedValue} location={location} category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
+    <Route path='/camera' element={<Camera selectedValue={selectedValue} setSelectedValue={setSelectedValue} location={location} category={category} gadgetBrand={gadgetBrand} setGadgetBrand={setGadgetBrand}/>}/>
     <Route path='/order' element={<Order/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/about' element={<About/>}/>
