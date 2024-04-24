@@ -201,9 +201,7 @@
     justify-content: right;
   }
 
-  .price {
-    display: none;
-  }
+
   .cart-item-mod {
     height: 30px;
     width: 100px;
