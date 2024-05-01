@@ -37,13 +37,13 @@ function Order() {
             </div>
 
               <div className="input-box single">
-                <input type="number" required />
+                <input type="number" required maxLength={10}/>
                 <span>Mobile No</span>
               </div>
 
               <div className="multi-fields">
               <div className="input-box">
-              <input type="number" required/>
+              <input type="number" required maxLength={6}/>
               <span>Pincode</span>
               </div>
 
